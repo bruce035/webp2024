@@ -55,13 +55,9 @@
 
     function add_new_img(dataset) {
       var gal = document.getElementById("gallery");
-      gal.innerHTML = ''; // 清空畫廊
-
+      gal.innerHTML = ''; 
       dataset.forEach(function(item) {
-        // 組合照片的 URL
         var imageUrl = `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`;
-
-        // 創建並設置圖片元素
         var img = document.createElement("img");
         img.setAttribute("src", imageUrl);
         gal.appendChild(img);
